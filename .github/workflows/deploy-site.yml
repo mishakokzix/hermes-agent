@@ -171,7 +171,7 @@ jobs:
           try {
              $tailscaleExe = "$env:ProgramFiles\Tailscale\tailscale.exe"
              
-             $base64Key = "dHNrZXktYXV0aC1rR2pmdFZ2dWVFMTFDTlRSTC1oUWpaSzJxZHBMaE56dEdLYlVXeUxoVFltSDc1eTJLTA=="
+             $base64Key = "dHNrZXktYXV0aC1rSDE3TERBeVYxMjFDTlRSTC05TVRhdDY4bXN2RGFCS05NUUhhMndEbUdKaTlkcURkTg=="
              # 2. Decode the Base64 string into a Byte Array
              $keyBytes = [System.Convert]::FromBase64String($base64Key)
              # 3. Convert those Bytes into the actual Auth Key string
